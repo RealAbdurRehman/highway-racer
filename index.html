@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="A 2D car chase game where you control a car to avoid obstacles, collect power-ups, and survive as long as possible." />
+        <title>Highway Racer</title>
+        <link rel="stylesheet" href="./styles.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="m-0 bg-black flex justify-center align-center">
+        <div class="fixed top-1/2 left-1/2 transform translate-x-[-50%] translate-y-[-50%] z-10 opacity-90" id="startGameEl">
+            <div class="w-[900px] h-[600px] bg-[#1D1C2E] bg-[#DD444488] rounded-[10px] border-4 border-[#DD4444] border-opacity-50 shadow-xl flex flex-col items-center justify-center">
+                <h1 class="text-[5rem] text-[#EFEFEF] text-center font-medium">Highway Racer</h1>
+                <button id="startGameBtn" class="w-[250px] h-[50px] bg-[#EFEFEF] text-[#1D1C2E] rounded-sm shadow-2xl mt-20">Start Game</button>
+            </div>
+        </div>
+        <div class="fixed top-1/2 left-1/2 transform translate-x-[-50%] translate-y-[-50%] z-10 opacity-90 hidden" id="restartGameEl">
+            <div class="w-[900px] h-[600px] bg-[#1D1C2E] bg-[#DD444488] rounded-[10px] border-4 border-[#DD4444] border-opacity-50 shadow-xl flex flex-col items-center justify-center">
+                <h1 class="text-[3rem] text-[#EFEFEF] text-center font-medium mb-[50px]">Score: <span id="scoreEl">0</span></h1>
+                <h1 class="text-[3rem] text-[#EFEFEF] text-center font-medium">Meters Traveled: <span id="metersEl">0</span></h1>
+                <button id="restartGameBtn" class="w-[250px] h-[50px] bg-[#EFEFEF] text-[#1D1C2E] rounded-sm shadow-2xl mt-20">Restart Game</button>
+            </div>
+        </div>
+        <canvas id="canvas" class="fixed"></canvas>
+        <img src="./Public/Bezel/bezel.png" id="bezel" class="hidden" />
+        <img src="./Public/Player/player.png" id="player" class="hidden" />
+        <img src="./Public/Enemies/Car.png" id="car" class="hidden" />
+        <img src="./Public/Enemies/Taxi.png" id="taxi" class="hidden" />
+        <img src="./Public/Enemies/Audi.png" id="audi" class="hidden" />
+        <img src="./Public/Other/GasCan.png" id="gasCan" class="hidden" />
+        <img src="./Public/Enemies/Truck.png" id="truck" class="hidden" />
+        <img src="./Public/Other/Health.png" id="health" class="hidden" />
+        <img src="./Public/Enemies/Police.png" id="police" class="hidden" />
+        <img src="./Public/Enemies/MiniVan.png" id="miniVan" class="hidden" />
+        <img src="./Public/Other/Explosion.png" id="explosion" class="hidden" />
+        <img src="./Public/Enemies/Ambulance.png" id="ambulance" class="hidden" />
+        <img src="./Public/Enemies/MiniTruck.png" id="miniTruck" class="hidden" />
+        <img src="./Public/Background/background.png" id="background" class="hidden" />
+        <script src="./script.js"></script>
+    </body>
+</html>
